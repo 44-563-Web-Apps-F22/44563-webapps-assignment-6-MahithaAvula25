@@ -15,11 +15,15 @@
 
     <input type="button" onclick="checkGuess()" value="Check the guess ">
 </form>
-<p id="result">This text will be replaced </p>
+<p id="result">values are confirmed </p>
+<div class="container">
+    <img src="Mosquito.jpg" width="100px" height="100px" alt="Mosquito" id="images"onclick="swapImage()">
+</div>
 
 <script> 
 correct=0;
 wrong=0;
+useImage=1;
 function checkGuess(){
     console.log("Check the guess")
     secret = document.getElementById("SecretMusician").value
@@ -34,6 +38,23 @@ function checkGuess(){
    }
     
     result.innerHTML="Correct guess: "+correct+"Wrong guess: "+wrong
+}
+function swapImage(){
+    switch(useImage){
+        case 1:
+            document.getElementById("images").src="Mosquito.jpg";
+            useImage+=1;
+            break;
+            case 2:
+            document.getElementById("images").src="Ant.jpg";
+            useImage+=1;
+            break;
+            case 3:
+            document.getElementById("images").src="Underwing.jpg";
+            useImage=1;
+            break;
+
+    }
 }
 </script>
 </body>
