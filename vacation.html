@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vacation page</title>
+</head>
+<body>
+    <h1>selects a vacation by Mahitha Avula </h1>
+    <form>
+        <input type="checkbox" id="Air" name="topping1"   
+          value="True" checked>
+        <label for="Air">Travel by Air</label></br>
+      
+        <input type="checkbox" id="Domestic" name="topping2" 
+           value="True">
+        <label for="Domestic">Domestic</label></br>
+      
+        <input type="checkbox" id="Resort" name="topping3"   
+           value="False" checked>
+        <label for="Resort">Resort</label></br>
+
+        <input type="button" onclick="selectVacation()" value="Select a vacation">
+    </form>
+      <p id="result"> </p><br> 
+      <script>
+        function selectVacation()
+        {  var my_vacation={}
+        if(document.getElementById("Air").checked){
+            my_vacation.Air=true;
+
+        }
+        else{
+            my_vacation.Air=false;
+        }
+        result.innerHTML=result.innerHTML+"\n"+"Air: "+my_vacation.Air
+        if(document.getElementById("Domestic").checked){
+            my_vacation.Domestic=true;
+
+        }
+        else{
+            my_vacation.Domestic=false;
+        }
+        result.innerHTML=result.innerHTML+"\n"+"Domestic: "+my_vacation.Domestic
+        if(document.getElementById("Resort").checked){
+            my_vacation.Resort=true;
+
+        }
+        else{
+            my_vacation.Resort=false;
+        }
+        result.innerHTML=result.innerHTML+"\n"+"Resort: "+my_vacation.Resort
+       
+            // if(airselect){
+            //     result=true
+            // }
+            // else{
+                
+            //     result=true
+            // }
+            
+            //  if(domesticselect){
+            //     result=true
+            // }
+            // else{
+            //     result=false
+            // }
+            //  if(resortselect){
+            //      result=true
+            // }
+            // else{
+            //     result=false
+            // }
+            // my_vacation=result
+            // document.getElementById("result").innerHTML="Vacation "+my_vacation
+
+        
+        }
+        </script>
+</body>
+</html>
