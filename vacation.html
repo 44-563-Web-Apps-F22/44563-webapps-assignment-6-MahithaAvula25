@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>selects a vacation by Mahitha Avula </h1>
+    <div class="container">
     <form>
         <input type="checkbox" id="Air" name="topping1"   
           value="True" checked>
@@ -23,7 +24,22 @@
 
         <input type="button" onclick="selectVacation()" value="Select a vacation">
     </form>
-      <p id="result"> </p><br> 
+      <p id="result"></p>
+      <br> 
+    </div>
+    <br>
+
+    <div class="container">
+        <form>
+        <input type="text" id="CityName" value="city" name="city">
+      <label for="CityName">Enter a city</label></br>
+      <input type="text" id="Price" value=" " name="Price">
+      <label for="Price">Enter price</label></br>
+      <input type="button" onclick="updateVacation()" value="Update the vacation”">
+    </form>
+    <p id="result1"> </p>
+    <br> 
+    </div>
       <script>
         function selectVacation()
         {  var my_vacation={}
@@ -52,31 +68,16 @@
         }
         result.innerHTML=result.innerHTML+"\n"+"Resort: "+my_vacation.Resort
        
-            // if(airselect){
-            //     result=true
-            // }
-            // else{
-                
-            //     result=true
-            // }
-            
-            //  if(domesticselect){
-            //     result=true
-            // }
-            // else{
-            //     result=false
-            // }
-            //  if(resortselect){
-            //      result=true
-            // }
-            // else{
-            //     result=false
-            // }
-            // my_vacation=result
-            // document.getElementById("result").innerHTML="Vacation "+my_vacation
-
-        
+          
         }
+    function updateVacation(){
+        var my_vacation={}
+        city1=document.getElementById("CityName").value
+        price1=document.getElementById("Price").value
+        my_vacation["city"]=city1
+        my_vacation["price"]=price1
+        document.getElementById("result1").innerHTML+="city: "+ my_vacation["city"]+"\n"
++"price:" +  my_vacation["price"] }
         </script>
 </body>
 </html>
